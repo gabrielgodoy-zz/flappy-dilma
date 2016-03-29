@@ -1,0 +1,97 @@
+@font-face {
+    font-family: 'Flappy Bird';
+    src: url('fonts/flappy-bird-webfont.eot');
+    src: url('fonts/flappy-bird-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/flappy-bird-webfont.woff2') format('woff2'),
+         url('fonts/flappy-bird-webfont.woff') format('woff'),
+         url('fonts/flappy-bird-webfont.ttf') format('truetype'),
+         url('fonts/flappy-bird-webfont.svg#04b_19regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
+	position: relative;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	height: 100%;
+	background: radial-gradient(#263238, #1a2124);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-align: center;
+}
+header {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 80px;
+    z-index: 9;
+}
+footer {
+    background: #1e272b;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-top: 20px;
+    height: 60px;
+    text-align: center;
+    left: 0;
+    z-index: 9;
+}
+.share-box {
+    margin-bottom: 60px;
+}
+.share-box a {
+    text-decoration: none;
+}
+
+.share-box .icon {
+    width: 22px;
+    display: inline-block;
+    margin-top: 6px;
+    vertical-align: middle;
+}
+
+.share-box .icon.icon-fb {
+    margin-right: 10px;
+}
+
+.share-box .icon.icon-tw {
+    width: 24px;
+    margin-top: 2px;
+}
+.github-corner:hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out;
+}
+
+.octo-arm, .octo-body {
+    fill: #1a2124;
+}
+
+.github-holder p {
+    color: #125399;
+    font-family: Arial;
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+    top: -5px;
+}
+.github-holder p a {
+    color: white;
+    text-decoration: none;
+    color: #84b6eb;
+}
+h2 {
+	margin: 60px 0 20px;
+	color: white;
+	font-family: 'Flappy Bird';
+	text-shadow: 2px 2px green, 4px 4px #000;
+	font-size: 50px;
+}
+canvas {
+	border: 1px solid #44555e;
+	margin: 0 auto;
+}
