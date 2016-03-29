@@ -166,7 +166,7 @@ var mainState = {
         // With one big hole at position 'hole' and 'hole + 1'
         for (var i = 0; i < 8; i++)
             if (i != hole && i != hole + 1)
-                this.addOnePipe(400, i * 60 + 10);
+                this.addOnePipe(600, i * 60 + 10);
 
             // Increase the score by 1 each time new pipes are created
         this.score += 1;
