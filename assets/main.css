@@ -30,6 +30,10 @@ header {
     height: 80px;
     z-index: 9;
 }
+body > p {
+    color: #125399;
+    font-family: Arial;
+}
 footer {
     background: #263238;
     position: absolute;
@@ -70,7 +74,31 @@ footer {
 .octo-arm, .octo-body {
     fill: #1a2124;
 }
+@keyframes octocat-wave {
+    0% {
+        transform: rotate(0deg);
+    }
 
+    20% {
+        transform: rotate(-25deg);
+    }
+
+    40% {
+        transform: rotate(10deg);
+    }
+
+    60% {
+        transform: rotate(-25deg);
+    }
+
+    80% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
 .github-holder p {
     color: #125399;
     font-family: Arial;

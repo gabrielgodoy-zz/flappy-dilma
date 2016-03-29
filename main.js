@@ -18,6 +18,8 @@ var mainState = {
 
         // Add sound
         game.load.audio('jump', 'assets/jump.wav');
+
+        game.load.audio('bye', 'assets/tchau-querida.mp3');
     },
 
     create: function() {
@@ -68,6 +70,8 @@ var mainState = {
 
         // Add sound
         this.jumpSound = game.add.audio('jump');
+
+        this.bye = game.add.audio('bye');
     },
 
     update: function() {
@@ -78,9 +82,10 @@ var mainState = {
 
         // If the bird is out of the screen (too high or too low)
         // Call the 'restartGame' function
-        if (this.bird.y < 0 || this.bird.y > 490)
+        if (this.bird.y < 0 || this.bird.y > 490) {
+            this.bye.play();
             this.restartGame();
-
+        }
         // Call restartGame() each time the bird collides with a pipe from the pipes group
         game.physics.arcade.overlap(
             this.bird, this.pipes, this.hitPipe, null, this);
@@ -94,8 +99,9 @@ var mainState = {
     hitPipe: function() {
         // If the bird has already hit a pipe, do nothing
         // It means the bird is already falling off the screen
-        if (this.bird.alive == false)
+        if (this.bird.alive == false) {
             return;
+        }
 
         // Set the alive property of the bird to false
         this.bird.alive = false;
